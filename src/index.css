@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer components{
+  .nav_link{
+      @apply relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px]
+      after:bg-yellow-300 text-white after:w-full font-medium after:scale-x-0 after:hover:scale-x-100
+      after:transition after:duration-300 after:origin-right
+  }
+}
+
+@theme {
+  --font-calistoga: "Calistoga", sans-serif;
+  --font-crimson: "Crimson Text", serif;
+  --font-lato: "Lato", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+
+   /* Colors */
+  --color-nav: #1f4561;
+
+  /* Screens */
+  --screen-300px: 300px;
+  --screen-400px: 400px;
+}
+
+
+/* index.css or App.css */
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #247FB2;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #020298;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 14px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #247FB2;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #020298;
+}
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
